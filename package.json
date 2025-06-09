@@ -1,0 +1,30 @@
+{
+  "name": "playtester",
+  "version": "1.0.0",
+  "main": "index.js",
+"scripts": {
+  "test": "npx playwright test",
+  "test:report": "npx playwright show-report",
+  "test:ci": "npx playwright test --reporter=dot,json",
+  "test:crawl": "npx playwright test tests/crawler.spec.ts",
+  "test:limited-crawl": "npx playwright test tests/crawler-depth-limited.spec.ts",
+  "test:all": "npx playwright test && npx playwright show-report"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klejnieks/playtester.git"
+  },
+  "author": "klejnieks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klejnieks/playtester/issues"
+  },
+  "homepage": "https://github.com/klejnieks/playtester#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "playwright": "^1.52.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
